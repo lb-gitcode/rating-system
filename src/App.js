@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import StarRating from "./components/StarRating";
+import Dialog from "./components/Dialog";
 
 function App() {
+  const stars = [
+    { index: 0, },
+    { index: 1, },
+    { index: 2, },
+    { index: 3, },
+    { index: 4, }
+  ];
+
+  let ratingText = 'Help';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Dialog />
+      <div>
+        <button className="dialog-btn">Open Dialog</button>
+      </div>
+      <div className="star-rating flex">
+        <StarRating stars={stars} />
+        <p>{ratingText}</p>
+      </div>
+    </>
   );
 }
 

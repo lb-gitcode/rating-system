@@ -1,0 +1,55 @@
+@import './reset.css';
+
+body {
+  background-color: rgb(40, 2, 51);
+  color: rgb(240, 255, 255);
+}
+
+.flex {
+  display: flex;
+}
+
+.star-rating {
+  width: 100%;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 26px;
+  }
+}
+
+.star {
+  color: white;
+}
+
+.colour {
+  background-color: blue;
+}
+
+.dialog-btn {
+  position: fixed;
+  margin: 20px;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.dialog {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 45%;
+  border-radius: 6px;
+  border: 1px solid rgb(236, 238, 224);
+  background-color: rgb(254, 255, 249);
+}
+
+.hide-dialog {
+  opacity: 0;
+  visibility: hidden;
+}
