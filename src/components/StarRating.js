@@ -3,11 +3,11 @@ import { useState } from "react";
 
 function StarRating(props)
 {
-  const [stars, setStars] = useState(0);
+  const [starsSelected, selectStars] = useState(0);
 
   const setRating = (e) => {
-    // setStars(th);
-    console.log(e);
+    selectStars(2);
+    console.log(e.currentTarget);
   }
 
   let ratingText = 'Hai';
@@ -16,10 +16,10 @@ function StarRating(props)
     <div className="star-rating flex">
       <div className="stars flex">
         {props.stars.map(link => (
-          <span key={link.index} onClick={e => setRating(e.target.index)} className="star-checked"><Star /></span>
+          <span key={link.index} name={link.name} className="star-checked"><Star onClick={setRating}/></span>
         ))}
       </div>
-      <p>{ratingText}</p>
+      <h2>{ratingText}</h2>
     </div>
   );
 }
