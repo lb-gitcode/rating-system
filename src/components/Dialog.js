@@ -1,9 +1,17 @@
-function Dialog()
+function Dialog(props)
 {
-  <div className="dialog">
-    <p className="close-dialog">X</p>
-    <h4>Hello</h4>
-  </div>
+  const isOpen = false;
+
+  return(
+    <div className={props.class}>
+      <div className="dialog hide-dialog">
+        <button onClick={props.closeDialog}>X</button>
+        <div className="dialog-content">
+          <p>Hello!</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Dialog;

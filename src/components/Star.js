@@ -1,10 +1,15 @@
 import { FaStar } from 'react-icons/fa';
 
-function Star()
+function Star(props)
 {
+  function clickStar(e)
+  {
+    console.log(e)
+  }
+
   return(
     <>
-      <FaStar className='star' />
+      <FaStar className='star' className={props.clicked} />
     </>
   );
 }

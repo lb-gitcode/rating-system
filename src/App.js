@@ -1,5 +1,6 @@
 import StarRating from "./components/StarRating";
 import Dialog from "./components/Dialog";
+import { useState } from "react";
 
 function App() {
   const stars = [
@@ -10,17 +11,24 @@ function App() {
     { index: 4, }
   ];
 
-  let ratingText = 'Help';
+  const openDialog = () => 
+  {
+
+  }
+
+  const closeDialog = () =>
+  {
+    
+  }
 
   return (
     <>
-      <Dialog />
+      <Dialog close={closeDialog} />
       <div>
         <button className="dialog-btn">Open Dialog</button>
       </div>
       <div className="star-rating flex">
         <StarRating stars={stars} />
-        <p>{ratingText}</p>
       </div>
     </>
   );
