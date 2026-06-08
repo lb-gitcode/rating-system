@@ -2,11 +2,11 @@ import { FaStar } from 'react-icons/fa';
 
 function Star(props)
 {
-  let isClicked = false;
+  let isClicked = props.clicked;
 
   return(
     <>
-      <FaStar onClick={props.onClick} className='star' className={props.clicked} />
+      <FaStar onClick={props.onClick} className='star' className={props.class} />
     </>
   );
 }
